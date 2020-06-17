@@ -166,7 +166,7 @@ function next()
     n++;
     setAudio();
     evalCheck();
-    document.mosform.reset();
+//     document.mosform.reset();
     setButton();
 }
 
