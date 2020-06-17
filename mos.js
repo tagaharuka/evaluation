@@ -64,7 +64,6 @@ function evalCheck()
 
 function setButton()
 {
-    document.mosform.reset();
     if (n == scores.length - 1) {
         document.getElementById("prev").disabled=false;
         document.getElementById("next").disabled=true;
@@ -167,6 +166,7 @@ function next()
     n++;
     setAudio();
     evalCheck();
+    document.mosform.reset();
     setButton();
 }
 
