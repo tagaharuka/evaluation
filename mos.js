@@ -176,7 +176,7 @@ function next()
     n++;
     setAudio();
     evalCheck();
-    resetForm();
+//     resetForm();
     setButton();
 }
 
