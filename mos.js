@@ -83,7 +83,7 @@ function setButton()
             document.getElementById("prev").disabled=false;
         }
         document.getElementById("next").disabled=true;
-        document.getElementById("finish").disabled=true;
+        document.getElementById("finish").disabled=false;
         for (var i=0; i<eval.length; i++) {
             if (eval[i].checked) {
                 document.getElementById("next").disabled=false;
@@ -139,9 +139,9 @@ function resetForm()
 //     document.getElementById("check3").checked = false;
 //     document.getElementById("check4").checked = false;
 //     document.getElementById("check5").checked = false;
-    for (const element of document.getElementsByName('radio')) {
-        element.checked = false;
-    }   
+    for (var i=0; i<eval.length; i++) {
+        eval[i].checked = false;
+    }
 //     return false;
 }
 
