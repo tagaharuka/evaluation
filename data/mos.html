@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <script type="text/javascript" src="mos.js"></script>
+        <title>MOS</title>
+    </head>
+
+    <body onload="init()">
+
+        <!-- 注意書きなど -->
+        <div style="border:1px solid #000000; padding: 10px; border-radius: 0px; background: ##ffffff;">
+
+            <p>
+                <h1>評価実験（自然性の評価）</h1>
+                評価実験にご協力いただきまして、誠にありがとうございます。<br>
+                評価の手順を説明します。
+                <h2>評価手順</h2>
+                <ol>
+                    <li>以下の「評価歌声」を聴く。</li>
+                    <li>「評価歌声」の「自然性」を評価し、以下の選択肢から選ぶ。</li>
+                    <li>「次へ」ボタンを押し、次の歌声の評価を行う。</li>
+                    <li>すべての評価が終了したら、「終了」ボタンを押し、評価結果（CSVファイル）をダウンロードする。</li>
+                    <li>ダウンロードしたファイルを以下のメールアドレス、または多賀のslackに送信する。<br>
+                        taga.haruka@g.sp.m.is.nagoya-u.ac.jp</li>
+                </ol>
+                <h2>注意事項</h2>
+                <ul>
+                    <li>静かな部屋で、ヘッドホン（推奨）またはイヤホンを使用して評価を行ってください。</li>
+                    <li>評価の基準は自分のものでかまいません。</li>
+                    <li>ページを更新すると、今までの評価がすべてやり直しになってしまうので注意してください。</li>
+                    <li>不明な点などありましたら、Slackまたは上記のメールアドレスまで遠慮なくご連絡お願いします。</li>
+                </ul>
+            </p>
+
+        </div>
+
+        <p id="page"></p>
+
+        <p id="ref"></p>
+        <p id="sub"></p>
+
+        <p>
+            <label><input type="radio" name="eval" onclick="evaluation()">1: Bad</label><br>
+            <label><input type="radio" name="eval" onclick="evaluation()">2: Poor</label><br>
+            <label><input type="radio" name="eval" onclick="evaluation()">3: Fair</label><br>
+            <label><input type="radio" name="eval" onclick="evaluation()">4: Good</label><br>
+            <label><input type="radio" name="eval" onclick="evaluation()">5: Excellent</label>
+        </p>
+
+        <p>
+            <button id="prev" onclick="prev()">前へ</button>
+            <button id="next" onclick="next()">次へ</button>
+            <button id="finish" onclick="finish()">終了</button>
+        </p>
+
+        <p id="table"></p>
+
+    </body>
+
+</html>
