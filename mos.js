@@ -134,12 +134,13 @@ function setAudio()
 
 function resetForm()
 {
-    document.getElementById("check1").checked = false;
-    document.getElementById("check2").checked = false;
-    document.getElementById("check3").checked = false;
-    document.getElementById("check4").checked = false;
-    document.getElementById("check5").checked = false;
-    return false;
+//     document.getElementById("check1").checked = false;
+//     document.getElementById("check2").checked = false;
+//     document.getElementById("check3").checked = false;
+//     document.getElementById("check4").checked = false;
+//     document.getElementById("check5").checked = false;
+    document.getElementByName("eval").checked = false;
+//     return false;
 }
 
 function exportCSV()
@@ -176,7 +177,7 @@ function next()
     n++;
     setAudio();
     evalCheck();
-//     resetForm();
+    resetForm();
     setButton();
 }
 
