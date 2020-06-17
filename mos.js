@@ -179,8 +179,11 @@ function next()
     n++;
     setAudio();
     evalCheck();
+    for (var i=0; i<eval.length; i++) {
+        eval[i].checked = false;
+    }
     setButton();
-    resetForm();
+//     resetForm();
 }
 
 function prev()
