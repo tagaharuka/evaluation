@@ -134,12 +134,14 @@ function setAudio()
 
 function resetForm()
 {
-    document.getElementById("check1").checked = false;
-    document.getElementById("check2").checked = false;
-    document.getElementById("check3").checked = false;
-    document.getElementById("check4").checked = false;
-    document.getElementById("check5").checked = false;
-//     document.getElementByName("eval").checked = false;
+//     document.getElementById("check1").checked = false;
+//     document.getElementById("check2").checked = false;
+//     document.getElementById("check3").checked = false;
+//     document.getElementById("check4").checked = false;
+//     document.getElementById("check5").checked = false;
+    for (const element of document.getElementsByName('radio')) {
+        element.checked = false;
+    }   
 //     return false;
 }
 
