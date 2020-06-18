@@ -83,7 +83,7 @@ function setButton()
             document.getElementById("prev").disabled=false;
         }
         document.getElementById("next").disabled=true;
-        document.getElementById("finish").disabled=false;
+        document.getElementById("finish").disabled=true;
         for (var i=0; i<eval.length; i++) {
             if (eval[i].checked) {
                 document.getElementById("next").disabled=false;
@@ -177,13 +177,13 @@ function init()
 function next()
 {
     n++;
+    resetForm();
     setAudio();
     evalCheck();
-    for (var i=0; i<eval.length; i++) {
-        eval[i].checked = false;
-    }
+//     for (var i=0; i<eval.length; i++) {
+//         eval[i].checked = false;
+//     }
     setButton();
-//     resetForm();
 }
 
 function prev()
